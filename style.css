@@ -72,7 +72,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* Social-Links (Instagram / Fanshop) */
+/* Social-Links */
 .social-links {
   margin-bottom: 8px;
 }
@@ -90,7 +90,7 @@ h1, h2, h3 {
   background: rgba(255, 247, 227, 0.8);
 }
 
-/* Hauptbutton */
+/* Button */
 .btn-primary {
   display: inline-block;
   margin-top: 4px;
@@ -228,6 +228,71 @@ h1, h2, h3 {
   font-style: italic;
 }
 
+/* FANSHOP – Produktgrid */
+.fanshop-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.fanshop-card {
+  background: #fff7e3;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border: 2px solid #e0caa0;
+}
+
+.fanshop-thumb {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f6e0b8,
+    #f6e0b8 8px,
+    #e0b073 8px,
+    #e0b073 16px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.fanshop-desc {
+  margin: 6px 0;
+}
+
+.fanshop-price {
+  margin: 4px 0 10px;
+  font-weight: 700;
+}
+
+.fanshop-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #8c1d18;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.fanshop-more {
+  margin-top: 14px;
+}
+
+.fanshop-more a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #3b2515;
+}
+
 /* Timeline */
 .timeline {
   margin-top: 20px;
@@ -275,14 +340,16 @@ h1, h2, h3 {
   }
 
   .cards-grid,
-  .brew-grid {
+  .brew-grid,
+  .fanshop-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 700px) {
   .cards-grid,
-  .brew-grid {
+  .brew-grid,
+  .fanshop-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
