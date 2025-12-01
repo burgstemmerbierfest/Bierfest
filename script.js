@@ -1,12 +1,8 @@
-// Countdown bis zum Burgstemmer Bierfest 2026
-// Datum: 22. August 2026, 17:00 Uhr
-
 const countdownElement = document.getElementById("countdown");
 
 if (countdownElement) {
   function updateCountdown() {
     const target = new Date("2026-08-22T17:00:00");
-
     const now = new Date();
     const diff = target - now;
 
@@ -27,5 +23,5 @@ if (countdownElement) {
   }
 
   updateCountdown();
-  setInterval(updateCountdown, 60 * 1000);
+  setInterval(updateCountdown, 60000);
 }
