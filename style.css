@@ -5,9 +5,15 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #f4e9d8;
   color: #3b2f2f;
+}
+
+/* Überschriften im Retro-Stil */
+h1, h2, h3 {
+  font-family: "Bebas Neue", "Nunito", sans-serif;
+  letter-spacing: 0.08em;
 }
 
 /* HEADER */
@@ -47,25 +53,38 @@ body {
 /* Text im Header */
 .hero-text h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
   text-transform: uppercase;
 }
 
 .hero-date,
 .hero-location {
   margin: 4px 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.btn-primary {
+/* Countdown-Badge */
+.countdown {
   display: inline-block;
   margin-top: 10px;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #3b2515;
+  color: #fdf2cf;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Button */
+.btn-primary {
+  display: inline-block;
+  margin-top: 4px;
   padding: 8px 16px;
   background: #8c1d18;
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 999px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
@@ -101,8 +120,8 @@ body {
 }
 
 .section h2 {
+  font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
   border-bottom: 2px solid #8c1d18;
   display: inline-block;
 }
