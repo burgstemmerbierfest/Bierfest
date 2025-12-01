@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Burgstemmer Bierfest</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,8 +23,13 @@
 
       <div class="hero-text">
         <h1>Burgstemmer Bierfest</h1>
-        <p class="hero-date">Samstag, 17. August 2024 · ab 17:00 Uhr</p>
+        <p class="hero-date">22. August 2025 · ab 17:00 Uhr</p>
         <p class="hero-location">Hof Warnecke · Burgstemmen · Eintritt frei</p>
+
+        <div id="countdown" class="countdown">
+          Countdown wird geladen …
+        </div>
+
         <a href="#programm" class="btn-primary">Zum Programm</a>
       </div>
 
@@ -80,6 +91,10 @@
       <div class="timeline">
 
         <div class="timeline-item">
+          <time>Vortag</time> Feuerwehr-Kuppelcup auf dem Hof (geplant, Details folgen)
+        </div>
+
+        <div class="timeline-item">
           <time>17:00 Uhr</time> Einlass · MGV Burgstemmen
         </div>
 
@@ -125,8 +140,9 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Burgstemmer Bierfest · Burgstemmen</p>
+    <p>&copy; 2025 Burgstemmer Bierfest · Burgstemmen</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
