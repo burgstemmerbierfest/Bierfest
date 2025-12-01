@@ -1,13 +1,11 @@
-// Countdown bis zum Burgstemmer Bierfest
-// Datum: 22. August 2025, 17:00 Uhr (Ortszeit)
+// Countdown bis zum Burgstemmer Bierfest 2026
+// Datum: 22. August 2026, 17:00 Uhr
 
 const countdownElement = document.getElementById("countdown");
 
-// Wenn Element nicht gefunden wird, abbrechen
 if (countdownElement) {
   function updateCountdown() {
-    // Zielzeit (CEST ungefähr) – passt für unsere Zwecke
-    const target = new Date("2025-08-22T17:00:00");
+    const target = new Date("2026-08-22T17:00:00");
 
     const now = new Date();
     const diff = target - now;
@@ -18,9 +16,9 @@ if (countdownElement) {
     }
 
     const seconds = Math.floor(diff / 1000);
-    const days = Math.floor(seconds / (60 * 60 * 24));
-    const hours = Math.floor((seconds % (60 * 60 * 24)) / (60 * 60));
-    const minutes = Math.floor((seconds % (60 * 60)) / 60);
+    const days = Math.floor(seconds / 86400);
+    const hours = Math.floor((seconds % 86400) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
 
     countdownElement.textContent =
       days + " Tage · " +
@@ -29,5 +27,5 @@ if (countdownElement) {
   }
 
   updateCountdown();
-  setInterval(updateCountdown, 60 * 1000); // jede Minute aktualisieren
+  setInterval(updateCountdown, 60 * 1000);
 }
