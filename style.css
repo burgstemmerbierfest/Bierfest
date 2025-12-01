@@ -1,24 +1,184 @@
+/* Grundlayout */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4e9d8;
   color: #3b2f2f;
-  padding: 20px;
 }
 
-h1 {
-  color: #8c1d18;
-  font-size: 2.5rem;
+/* Hero-Bereich oben */
+
+.hero {
+  background: linear-gradient(135deg, #f6e0b8, #e0b073);
+  padding: 20px 16px 10px;
+  border-bottom: 4px solid #8c1d18;
 }
 
-p {
-  font-size: 1.2rem;
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-.box {
+.hero-logo {
+  width: 110px;
+  height: 140px;
+  border-radius: 20px;
+  background: #8c1d18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff7e3;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-date,
+.hero-location {
+  margin: 4px 0;
+  font-weight: 500;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #8c1d18;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Navigation */
+
+.main-nav {
+  max-width: 1100px;
+  margin: 14px auto 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #fff7e3;
+  background: #3b2515;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* Hauptinhalt */
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.section h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 2px solid #8c1d18;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Karten-Grid */
+
+.cards-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.card {
   background: #fff7e3;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  margin-top: 20px;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Timeline */
+
+.timeline {
+  margin-top: 12px;
+  border-left: 3px solid #8c1d18;
+  padding-left: 12px;
+}
+
+.timeline-item {
+  margin-bottom: 10px;
+}
+
+.timeline-item time {
+  font-weight: 700;
+  display: block;
+}
+
+/* FAQ */
+
+.faq details {
+  margin: 6px 0;
+  background: #fff7e3;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 40px;
+  padding: 14px;
+  text-align: center;
+  background: #3b2515;
+  color: #f9e7c7;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+
+@media (min-width: 700px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-inner {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+
+  .hero-logo {
+    width: 90px;
+    height: 120px;
+  }
+
+  .main {
+    padding: 12px;
+  }
 }
