@@ -72,7 +72,25 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* Button */
+/* Social-Links (Instagram / Fanshop) */
+.social-links {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 8px;
+  margin-top: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #3b2515;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #3b2515;
+  background: rgba(255, 247, 227, 0.8);
+}
+
+/* Hauptbutton */
 .btn-primary {
   display: inline-block;
   margin-top: 4px;
@@ -144,7 +162,7 @@ h1, h2, h3 {
   font-size: 0.8rem;
 }
 
-/* Karten */
+/* Karten "Was dich erwartet" */
 .cards-grid {
   margin-top: 20px;
   display: grid;
@@ -163,12 +181,6 @@ h1, h2, h3 {
   margin-top: 20px;
   display: grid;
   gap: 20px;
-}
-
-@media (min-width: 700px) {
-  .brew-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .brew-card {
@@ -256,12 +268,21 @@ h1, h2, h3 {
     flex-direction: column;
     text-align: center;
   }
+
   .hero-logo {
     width: 90px;
     height: 110px;
   }
+
   .cards-grid,
   .brew-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .cards-grid,
+  .brew-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
