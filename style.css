@@ -126,6 +126,38 @@ h1, h2, h3 {
   display: inline-block;
 }
 
+/* Kuppelcup-Highlight */
+.kuppelcup-section {
+  position: relative;
+  background: #fbe8c3;
+  padding: 24px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+  border: 2px solid #d26a25;
+}
+
+.kuppelcup-section h2 {
+  border-bottom-color: #d26a25;
+}
+
+.kuppelcup-badge {
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  background: #d26a25;
+  color: #fff7e3;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.kuppelcup-text {
+  margin-top: 10px;
+}
+
 /* Karten */
 .cards-grid {
   margin-top: 20px;
