@@ -31,26 +31,22 @@ h1, h2, h3 {
   align-items: center;
 }
 
-/* Logo-Box */
+/* Logo */
 .hero-logo {
   width: 120px;
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  background: none;
-  box-shadow: none;
 }
 
 .hero-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
 }
 
-/* Text im Header */
+/* Header-Text */
 .hero-text h1 {
   margin: 0;
   font-size: clamp(2.4rem, 4vw, 3.4rem);
@@ -63,7 +59,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* Countdown-Badge */
+/* Countdown */
 .countdown {
   display: inline-block;
   margin-top: 10px;
@@ -115,6 +111,7 @@ h1, h2, h3 {
   padding: 16px;
 }
 
+/* Sektionen */
 .section {
   margin-top: 40px;
 }
@@ -126,7 +123,7 @@ h1, h2, h3 {
   display: inline-block;
 }
 
-/* Kuppelcup-Highlight */
+/* KUPPELCUP */
 .kuppelcup-section {
   position: relative;
   background: #fbe8c3;
@@ -136,26 +133,15 @@ h1, h2, h3 {
   border: 2px solid #d26a25;
 }
 
-.kuppelcup-section h2 {
-  border-bottom-color: #d26a25;
-}
-
 .kuppelcup-badge {
   position: absolute;
   top: -14px;
   left: 16px;
   background: #d26a25;
-  color: #fff7e3;
+  color: #fff;
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.kuppelcup-text {
-  margin-top: 10px;
 }
 
 /* Karten */
@@ -170,6 +156,64 @@ h1, h2, h3 {
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* BRAUEREIEN – Grid */
+.brew-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 700px) {
+  .brew-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.brew-card {
+  background: #fff7e3;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border: 2px solid #e0caa0;
+}
+
+.brew-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brew-tag {
+  background: #8c1d18;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.brew-tag-alt {
+  background: #d26a25;
+}
+
+.brew-location {
+  margin: 8px 0 4px;
+  font-weight: 600;
+  color: #7a4d29;
+}
+
+.brew-list {
+  margin: 6px 0;
+  padding-left: 20px;
+}
+
+.brew-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #7a6b58;
+  font-style: italic;
 }
 
 /* Timeline */
@@ -212,19 +256,12 @@ h1, h2, h3 {
     flex-direction: column;
     text-align: center;
   }
-
   .hero-logo {
     width: 90px;
     height: 110px;
   }
-
-  .cards-grid {
+  .cards-grid,
+  .brew-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 700px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
