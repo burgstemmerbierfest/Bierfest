@@ -1,4 +1,4 @@
-/* Grundlayout */
+/* Basislayout */
 * {
   box-sizing: border-box;
 }
@@ -10,10 +10,10 @@ body {
   color: #3b2f2f;
 }
 
-/* Hero-Bereich */
+/* HEADER */
 .hero {
   background: linear-gradient(135deg, #f6e0b8, #e0b073);
-  padding: 20px 16px 10px;
+  padding: 20px 16px;
   border-bottom: 4px solid #8c1d18;
 }
 
@@ -21,20 +21,20 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  gap: 16px;
+  gap: 24px;
   align-items: center;
 }
 
+/* Logo-Box */
 .hero-logo {
-  width: 90px;
-  height: 120px;
-  border-radius: 20px;
-  background: #8c1d18;
+  width: 120px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-  padding: 6px;
+  padding: 0;
+  background: none;
+  box-shadow: none;
 }
 
 .hero-logo img {
@@ -44,6 +44,7 @@ body {
   display: block;
 }
 
+/* Text im Header */
 .hero-text h1 {
   margin: 0;
   font-size: clamp(2.2rem, 4vw, 3rem);
@@ -72,7 +73,7 @@ body {
 /* Navigation */
 .main-nav {
   max-width: 1100px;
-  margin: 14px auto 4px;
+  margin: 14px auto 0;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -88,7 +89,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Hauptinhalt */
+/* Inhalt */
 .main {
   max-width: 1100px;
   margin: 0 auto;
@@ -96,7 +97,7 @@ body {
 }
 
 .section {
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .section h2 {
@@ -104,36 +105,31 @@ body {
   letter-spacing: 0.08em;
   border-bottom: 2px solid #8c1d18;
   display: inline-block;
-  padding-bottom: 4px;
 }
 
 /* Karten */
 .cards-grid {
-  margin-top: 16px;
+  margin-top: 20px;
   display: grid;
-  gap: 16px;
+  gap: 20px;
 }
 
 .card {
   background: #fff7e3;
-  padding: 16px;
+  padding: 20px;
   border-radius: 16px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.card h3 {
-  margin-top: 0;
-}
-
 /* Timeline */
 .timeline {
-  margin-top: 16px;
+  margin-top: 20px;
   border-left: 3px solid #8c1d18;
-  padding-left: 14px;
+  padding-left: 16px;
 }
 
 .timeline-item {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .timeline-item time {
@@ -143,9 +139,9 @@ body {
 
 /* FAQ */
 .faq details {
-  margin: 8px 0;
+  margin: 10px 0;
   background: #fff7e3;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border-radius: 12px;
 }
 
@@ -160,12 +156,6 @@ body {
 }
 
 /* Responsive */
-@media (min-width: 700px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 700px) {
   .hero-inner {
     flex-direction: column;
@@ -173,7 +163,17 @@ body {
   }
 
   .hero-logo {
-    width: 80px;
-    height: 100px;
+    width: 90px;
+    height: 110px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
